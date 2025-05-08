@@ -32,3 +32,9 @@ user_input = input("Enter your message: ")
 state = graph.invoke({"messages": [{"role": "user", "content": user_input}]})
 
 print(state["messages"][-1].content) #-1 to grab the last message and print it
+# The above code is a simple chatbot using LangChain and OpenAI's o4-mini model.
+# It initializes the model, defines a state graph, and processes user input to generate a response.
+# The chatbot function takes the current state, invokes the model with the messages, and returns the updated state.
+# The graph is built with nodes and edges to manage the flow of messages.
+# The user input is taken from the console, and the response from the model is printed.
+# The code uses the dotenv library to load environment variables, ensuring that sensitive information like API keys is handled securely.
